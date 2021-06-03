@@ -3,6 +3,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import User from '../../../components/User/User';
+import Scrollbar from '../../../components/Scrollbar/Scrollbar';
 
 const Search = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +17,10 @@ const Search = (props) => {
     setIsOpen(false);
   };
 
-  let usersList = <p>Нет доступных пользователей</p>
+  let usersList = <p>Нет доступных пользователей</p>;
 
   if (props.users.length) {
-    usersList = props.users.map(user=><User key={user.id} login={user.login} />)
+    usersList = props.users.map((user) => <User key={user.id} login={user.login} />);
   }
 
   return (
@@ -45,7 +46,9 @@ const Search = (props) => {
         <Fade in={isOpen}>
           <div className='h-5/6 flex flex-col bg-gray-700 w-full text-white p-2 rounded-lg'>
             <h2 className='mb-2 py-2 text-lg text-center'>Доступые пользователи</h2>
-            <div className='h-full overflow-y-auto mb-4'>{usersList}</div>
+            <div className='h-full overflow-y-auto mb-4'>
+              <Scrollbar>{usersList}</Scrollbar>
+            </div>
             <button
               className='block w-full h-8 uppercase font-bold bg-gray-500 rounded-lg focus:outline-none border-none lg:hover:opacity-80  transition-opacity'
               type='button'
