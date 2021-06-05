@@ -5,7 +5,7 @@ import Fade from '@material-ui/core/Fade';
 import User from '../../../components/User/User';
 import Scrollbar from '../../../components/Scrollbar/Scrollbar';
 
-const Search = (props) => {
+const Search = ({users, select}) => {
   const [isOpen, setIsOpen] = useState(false);
   const fadeRed = useRef(null);
 
@@ -19,8 +19,8 @@ const Search = (props) => {
 
   let usersList = <p>Нет доступных пользователей</p>;
 
-  if (props.users.length) {
-    usersList = props.users.map((user) => <User key={user.id} login={user.login} />);
+  if (users.length) {
+    usersList = users.map((user) => <User key={user.id} login={user.login} select={select} />);
   }
 
   return (

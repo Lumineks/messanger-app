@@ -32,7 +32,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.scroll::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #D1D5DB;
+  border-radius: 8px;
 }
