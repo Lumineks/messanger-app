@@ -9,7 +9,7 @@ import Layout from './Layout/Layout';
 function App() {
   const authenticationContext = useContext(Context);
   return (
-    <div className='App bg-gray-700 h-screen overflow-auto md:p-24 text-gray-100 scroll'>
+    <div className='App bg-gray-700 overflow-auto md:p-24 text-gray-100 scroll'>
       <Layout />
     </div>
   );

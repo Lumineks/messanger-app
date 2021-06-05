@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  min-height: 771px;
+  height: 100vh;
+}
+
+@media(min-height: 771px) {
+  .App {
+    min-height: auto;
+  }
 }
 
 .App-logo {

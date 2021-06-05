@@ -6,8 +6,7 @@ import Msger from '../containers/Msger';
 const Layout = (props) => {
   return (
     <div
-      className='flex flex-col justify-between h-full md:max-w-3xl m-auto border-gray-600 border-4'
-      style={{ minHeight: 560 }}>
+      className='flex flex-col h-full justify-between md:max-w-3xl m-auto border-gray-600 border-4'>
       <Header />
 
       <Msger />

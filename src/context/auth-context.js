@@ -13,7 +13,7 @@ export const AuthorizationContextProvider = (props) => {
   const [name, setName] = useState('Michail');
 
   // const userIsLoggedIn = !!token;
-  const userIsLoggedIn = !token;
+  const userIsLoggedIn = !!token;
 
   const loginHandler = (token, name) => {
     setToken(token);
